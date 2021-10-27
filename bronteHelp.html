@@ -4,19 +4,31 @@
    <head>
 <title>My AP Computer Science Webpage (Waka)</title>
 
-<h1> Hello and Welcome to My Webpage :)</h1>
+<h1 id='hoverToast'> Hello and Welcome to My Webpage :)</h1>
 <h2> <i>Hope you are having a wonderful day!</i></h2>
  
  
  <script type="text/javascript">
 
- function trigger()
- {
-   document.getElementById("hover").addEventListener("mouseover", popup);
-   {
+//  function trigger()
+//  {
+//    document.getElementById("hoverToast").addEventListener("mouseover", popup); //this is not the correct way
+//    {
+//       alert("hola");
+//    }
+// }
+// document.getElementById("hoverToast").addEventListener("mouseover", function(){ //you can do it this way too
+//       alert("hola");
+//    });
+
+   //create the function
+   function trigger(){
       alert("hola");
    }
-}
+
+   //call the function as the second parameter to addEventListener. Notice trigger being called below
+   document.getElementById("hoverToast").addEventListener("mouseover", trigger)
+   
 </script>
 <style>
 h1,h2{
